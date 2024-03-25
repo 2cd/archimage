@@ -33,7 +33,7 @@ args=(
     #
     --platform=linux/amd64
     --tag $repo
-    --file Dockerfile
+    --file $src_dir/Dockerfile
     $context
 )
 docker $args
