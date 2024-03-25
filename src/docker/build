@@ -1,4 +1,5 @@
-#!/bin/zsh -fex
+#!/usr/bin/env zsh
+set -fexo pipefail
 # -------------
 typeset -x DOCKER_BUILDKIT=1
 ARCHIVE=${ARCHIMG_ARCHIVE:-false}
