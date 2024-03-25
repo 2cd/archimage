@@ -2,6 +2,14 @@
 
 ![NyaArch](assets/img/Nyarch.svg)
 
+## Usage
+
+WORK IN PROGRESS
+
+## TODO
+
+- 1. +loong64,riscv64,aarch64 images
+
 ## Licenses
 
 1. Trademark
@@ -19,9 +27,9 @@
     - description: From [archlinux/archlinux-docker/pacman-conf.d-noextract.conf](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/blob/master/pacman-conf.d-noextract.conf?ref_type=heads)
     - license: [GPL-3.0](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/raw/master/LICENSE?ref_type=heads)
 5. pacman mirrorlist
-    - files: `assets/etc/pacman.d/mirrors/*mirrorlist`
+    - files: `assets/etc/pacman.d/mirrors/*list`
     - license: GPL-2.0
 6. Other
     - files: `*`
     - description: All other files are under the MIT license.
-    - license: [MIT](./LICENSE)
+    - license: [MIT](./LICENSE-MIT)

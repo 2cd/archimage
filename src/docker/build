@@ -1,0 +1,98 @@
+#!/bin/zsh -fex
+# -------------
+typeset -x DOCKER_BUILDKIT=1
+ARCHIVE=${ARCHIMG_ARCHIVE:-false}
+BASE=${ARCHIMG_BASE:-false}
+BASE_DEV=${ARCHIMG_BASE_DEV:-false}
+TESTING=${ARCHIMG_TESTING:-false}
+SLIM=${ARCHIMG_SLIM:-false}
+
+src_dir=${0:a:h}
+context=$(
+    cd $src_dir/../../assets/etc || exit 1
+    pwd
+)
+build_args=(
+    build
+    --progress=plain
+    --file $src_dir/Dockerfile
+)
+
+local -A tmm_arch_map=(
+    # tmm_arch      os_arch,oci_arch
+    x64             x86_64,amd64
+    # x64v2           x86_64,amd64/v2
+    # x64v3           x86_64,amd64/v3
+    # x64v4           x86_64,amd64/v4
+    # rv64gc          riscv64
+    # arm64           aarch64,arm64
+    # armv7a          armv7h,arm/v7
+    # # armv6           armv6h,arm/v6
+    # # armv5te         arm,arm/v5
+    # ppc64le         powerpc64le,ppc64le
+    # ppc             powerpc
+    # ppc64           powerpc64
+    # loong64         loong64
+    # i486            i486,386
+    # i686            i686,386
+    # x86             pentium4,386
+)
+
+arch_repo=ghcr.io/2cd/arch
+# Only for x64: archive, testing
+# all archs: "", base, base-devel, slim
+#
+# ARCHIVE=true
+# BASE=true
+# BASE_DEV=true
+# TESTING=true
+# SLIM=true
+
+for tmm_arch arch (${(kv)tmm_arch_map}) {
+    arch_arr=(${(s^,^)arch})
+    os_arch=$arch_arr[1]
+    oci_arch=$arch_arr[2]
+
+    if ((! #oci_arch)) {
+        oci_arch=$os_arch
+    }
+
+    args=(
+        $build_args
+        --platform   linux/$oci_arch
+        #
+        --build-arg
+        OS_ARCH=$os_arch
+        --build-arg
+        TMM_ARCH=$tmm_arch
+    )
+    repo=${arch_repo}
+    for v (ARCHIVE BASE BASE_DEV TESTING SLIM) {
+        if {${(P)v}} {
+            args+=(
+                --build-arg
+                $v=true
+            )
+            lower=${(L)v}
+            case $lower {
+                (archive | testing)
+                    if [[ $tmm_arch != x64 ]] {
+                        continue
+                    }
+            }
+            if [[ $lower == base_dev ]] {
+                lower=dev
+            }
+            repo=${arch_repo}-$lower
+        }
+    }
+
+    repo+=:$tmm_arch
+
+    args+=(
+        --tag   $repo
+        $context
+    )
+    docker $args
+    docker push $repo
+}

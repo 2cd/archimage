@@ -1,7 +1,7 @@
 NOTE:
 
 PGP checking is disabled by default.
-Do not use the http(no tls) mirror source in this case.
+Do not use the plain-http(no tls) mirror source in this case.
 
 Default:
     cd /etc/pacman.d/options/
