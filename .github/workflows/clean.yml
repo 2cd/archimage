@@ -1,7 +1,7 @@
 name: clean old images
 # auto-task.start-build-time = ?
-on: { "push": { "paths": [".github/workflows/clean.yml"] } }
-# on: { "schedule": [{ "cron": "10 2 * * 5" }] }
+# on: { "push": { "paths": [".github/workflows/clean.yml"] } }
+on: { "schedule": [{ "cron": "26 10 * * 6" }] }
 
 jobs:
   docker:
