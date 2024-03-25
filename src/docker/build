@@ -42,7 +42,8 @@ local -A tmm_arch_map=(
 
 arch_repo=ghcr.io/2cd/arch
 # Only for x64: archive, testing
-# all archs: "", base, base-devel, slim
+# x64v4: "", slim
+# all archs(exclude x64v4): "", base, base-devel, slim
 #
 # ARCHIVE=true
 # BASE=true
@@ -81,6 +82,12 @@ for tmm_arch arch (${(kv)tmm_arch_map}) {
                     if [[ $tmm_arch != x64 ]] {
                         continue
                     }
+                ;;
+                (base*)
+                    if [[ $tmm_arch == x64v4 ]] {
+                        continue
+                    }
+                ;;
             }
             if [[ $lower == base_dev ]] {
                 lower=dev

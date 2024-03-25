@@ -21,46 +21,53 @@ get_region() {
 local -A tmm_arch_map=(
     # tmm_arch      os_arch,oci_arch
     x64             x86_64,amd64
-    x64v2           x86_64,amd64/v2
-    x64v3           x86_64,amd64/v3
-    x64v4           x86_64,amd64/v4
-    rv64gc          riscv64
+    # x64v2           x86_64,amd64/v2
+    # x64v3           x86_64,amd64/v3
+    # amd64/v4 -> v3
+    # x64v4           x86_64,amd64/v3
+    # rv64gc          riscv64
     arm64           aarch64,arm64
-    armv7a          armv7h,arm/v7
+    # armv7a          armv7h,arm/v7
+    # ppc64le         powerpc64le,ppc64le
+    # ppc             powerpc
+    # ppc64           powerpc64
+    # loong64         loong64
+    # i486            i486,386
+    # i686            i686,386
+    # x86             pentium4,386
     # armv6           armv6h,arm/v6
     # armv5te         arm,arm/v5
-    ppc64le         powerpc64le,ppc64le
-    ppc             powerpc
-    ppc64           powerpc64
-    loong64         loong64
-    i486            i486,386
-    i686            i686,386
-    x86             pentium4,386
 )
 
 # repo=reg.tmoe.me:2096/pkgs/pacman-static:x64
-repo=ghcr.io/2cd/pacman-static:x64
+main_repo=ghcr.io/2cd/pacman-static
 # repo=ghcr.io/2cd/pacman-static:arm64
 
-args=(
-    build
-    --progress=plain
-    --file $src_dir/Dockerfile
-    #
-    --build-arg
-    REGION=$(get_region)
-    #
-    --tag $repo
-    --build-arg
-    OS_ARCH="x86_64"
-    --platform=linux/amd64
-    #
-    # --build-arg
-    # OS_ARCH="aarch64"
-    # --platform=linux/arm64
-    #
-    $context
-)
+for tmm_arch arch (${(kv)tmm_arch_map}) {
+    arch_arr=(${(s^,^)arch})
+    os_arch=$arch_arr[1]
+    oci_arch=$arch_arr[2]
 
-docker $args
-docker push $repo
+    if ((! #oci_arch)) {
+        oci_arch=$os_arch
+    }
+
+    repo=${main_repo}:$tmm_arch
+    args=(
+        build
+        --progress=plain
+        --file $src_dir/Dockerfile
+        #
+        --build-arg
+        REGION=$(get_region)
+        #
+        --tag $repo
+        --build-arg
+        OS_ARCH=$os_arch
+        --platform=linux/$oci_arch
+    )
+
+    args+=$context
+    docker $args
+    docker push $repo
+}

@@ -26,6 +26,5 @@ jobs:
         with:
           ref: dev
           fetch-depth: 1
-
       - name: build & push
         run: ./src/pacman-static/build

@@ -53,11 +53,11 @@ set -fexo pipefail
         (x64v2) x64v2=true ;;
         (x64v3)
             x64v3=true
-            x64v2=true
+            # x64v2=true
         ;;
         (x64v4)
             x64v4=true
-            x64v3=true
+            # x64v3=true
         ;;
     }
     x64_map=(
