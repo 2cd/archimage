@@ -1,6 +1,6 @@
-name: build x64
+name: build ArchLinux
 # auto-task.start-build-time = ?
-on: { "push": { "paths": [".github/workflows/init.yml"] } }
+on: { "push": { "paths": [".github/workflows/build.yml"] } }
 # on: { "schedule": [{ "cron": "10 2 * * 5" }] }
 
 jobs:
@@ -24,24 +24,42 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - uses: quartx-analytics/ghcr-cleaner@v1
+        with:
+          owner-type: org # or user
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository_owner: ${{ github.repository_owner }}
+          delete-untagged: true
+
       - uses: actions/checkout@v4
         with:
           ref: dev
           fetch-depth: 1
 
-      - run: ./src/docker/build
-      - env:
-          ARCHIMG_ARCHIVE: true
+      - name: build (arch)
         run: ./src/docker/build
-      - env:
+
+      # - name: build (arch-archive)
+      #   env:
+      #     ARCHIMG_ARCHIVE: true
+      #   run: ./src/docker/build
+
+      - name: build (arch-base)
+        env:
           ARCHIMG_BASE: true
         run: ./src/docker/build
-      - env:
+
+      - name: build (arch-dev)
+        env:
           ARCHIMG_BASE_DEV: true
         run: ./src/docker/build
-      - env:
+
+      - name: build (arch-testing)
+        env:
           ARCHIMG_TESTING: true
         run: ./src/docker/build
-      - env:
+
+      - name: build (arch-slim)
+        env:
           ARCHIMG_SLIM: true
         run: ./src/docker/build
