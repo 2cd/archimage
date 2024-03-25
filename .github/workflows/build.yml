@@ -35,7 +35,7 @@ jobs:
         shell: sh -e {0}
         run: docker run --rm -v /usr/local/bin:/app ${{env.ZSH_REPO}} cp /opt/bin/zsh /app/
       - name: set up QEMU
-        if:  ! startsWith(matrix.arch, 'x64') || ! endsWith(matrix.arch, '86')
+        if:  (!startsWith(matrix.arch, 'x64')) || (!endsWith(matrix.arch, '86'))
         uses: docker/setup-qemu-action@v3
 
       - name: Login to GHCR
