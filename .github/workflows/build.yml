@@ -28,7 +28,7 @@ jobs:
         with:
           owner-type: org # or user
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository_owner: ${{ github.repository_owner }}
+          repository-owner: ${{ github.repository_owner }}
           delete-untagged: true
 
       - uses: actions/checkout@v4
