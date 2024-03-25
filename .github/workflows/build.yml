@@ -10,19 +10,19 @@ jobs:
       matrix:
         arch:
           # - x64
-          - x64v2
-          - x64v3
+          # - x64v2
+          # - x64v3
           # - x64v4
-          - rv64gc
-          - arm64
-          - armv7a
+          # - rv64gc
+          # - arm64
+          # - armv7a
           - ppc64le
           - ppc
           - ppc64
           - loong64
-          - i486
-          - i686
-          - x86
+          # - i486
+          # - i686
+          # - x86
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -37,6 +37,12 @@ jobs:
       - name: set up QEMU
         if:  (!startsWith(matrix.arch, 'x64')) || (!endsWith(matrix.arch, '86'))
         uses: docker/setup-qemu-action@v3
+
+      - name: install qemu-user using apt
+        if: contains(fromJson('["ppc64le", "ppc", "ppc64", "loong64"]'), matrix.arch)
+        run: |
+          sudo apt update
+          sudo apt-get install -y qemu-user-static
 
       - name: Login to GHCR
         uses: docker/login-action@v3

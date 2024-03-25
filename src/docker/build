@@ -92,7 +92,13 @@ for tmm_arch arch (${(kv)tmm_arch_map}) {
                         exit
                     }
                 ;;
-                (base_dev) lower=dev ;|
+                (base_dev)
+                    # dev => +base
+                    args+=(
+                        --build-arg
+                        BASE=true
+                    )
+                    lower=dev ;|
                 (base*)
                     if [[ $tmm_arch == x64v4 ]] {
                         exit

@@ -87,25 +87,23 @@ ARG TESTING=false
 RUN <<ENABLE_TESTING
 #!/opt/bin/zsh
 set -fexo pipefail
-    if {$TESTING} {
-        cfg=${DISABLED_DIR}/10-testing.conf
-        mv ${cfg}.ini $cfg ||:
-        cp -Lvf $cfg ${REPO_DIR} ||:
-        pacman -Syu --noconfirm
+    if {! $TESTING} {
+        exit
     }
+    cfg=${DISABLED_DIR}/10-testing.conf
+    mv ${cfg}.ini $cfg ||:
+    cp -Lvf $cfg ${REPO_DIR} ||:
+    pacman -Syu --noconfirm
 ENABLE_TESTING
 
 # ---------------
-# build-args
-ARG BASE_DEV=false
+# build-arg
 ARG BASE=false
 RUN <<INSTALL_BASE
 #!/opt/bin/zsh
 set -fexo pipefail
-
-    if ! {$BASE || $BASE_DEV} {
-        echo skip
-        exit 0
+    if {! $BASE} {
+        exit
     }
 
     pacman-install base
@@ -127,8 +125,13 @@ set -fexo pipefail
     for i (${DISABLED_DIR}/*.conf) {
         cp -Lvf $i ${REPO_DIR}
     }
-    pacman-key --init
     enable_pgp_check=true
+    pacman-key --init || enable_pgp_check=false
+
+    if {! $enable_pgp_check} {
+        exit
+    }
+
     case ${OS_ARCH} {
         (i686 | i486 | pentium4) keyring_name=archlinux32 ;;
         (aarch64 | arm*)
@@ -156,18 +159,24 @@ set -fexo pipefail
         ln -svf bak/siglevel-optional.conf ./sig-level.conf
         unlink ../no-pgp-note.txt
     }
-
-    if {$BASE_DEV} {
-        pacman-install base-devel
-        pacman-install paru ||:
-        useradd -m user
-        usermod -aG wheel user
-        wheel_sudoer=/etc/sudoers.d/wheel
-        echo '%wheel ALL=(ALL:ALL) NOPASSWD: ALL' > $wheel_sudoer
-        chmod 440 -v $wheel_sudoer
-    }
 INSTALL_BASE
 
+# ---------------
+ARG BASE_DEV=false
+RUN <<INSTALL_BASE_DEV
+#!/opt/bin/zsh
+set -fexo pipefail
+    if {! $BASE_DEV} {
+        exit
+    }
+    pacman-install base-devel
+    pacman-install paru ||:
+    useradd -m user
+    usermod -aG wheel user
+    wheel_sudoer=/etc/sudoers.d/wheel
+    echo '%wheel ALL=(ALL:ALL) NOPASSWD: ALL' > $wheel_sudoer
+    chmod 440 -v $wheel_sudoer
+INSTALL_BASE_DEV
 # ---------------
 ARG ARCHIVE=false
 RUN <<UPDATE_ARCHIVE
@@ -178,59 +187,60 @@ set -fexo pipefail
         (x64*|i*86|x86) use_archive_cfg=true  ;;
         (*)             use_archive_cfg=false ;;
     }
+    if ! {$ARCHIVE && $use_archive_cfg} {
+        exit
+    }
 
-    if {$ARCHIVE && $use_archive_cfg} {
-        pacman-install curl
+    pacman-install curl
 
-        get_date() {
-            local awk_cmd=(
-                awk
-                -F 'href='
-                '/<a/ {
-                    html = $2
-                } END {
-                    split(html, arr, "\"")
-                    date = arr[2]
-                    print date
-                }'
-            )
-            curl -L $1 | $awk_cmd
-        }
+    get_date() {
+        local awk_cmd=(
+            awk
+            -F 'href='
+            '/<a/ {
+                html = $2
+            } END {
+                split(html, arr, "\"")
+                date = arr[2]
+                print date
+            }'
+        )
+        curl -L $1 | $awk_cmd
+    }
 
-        cd ${REPO_DIR}
-        rm *.conf ||:
-        cp -Lvf ${DISABLED_DIR}/00-arch.conf .
+    cd ${REPO_DIR}
+    rm *.conf ||:
+    cp -Lvf ${DISABLED_DIR}/00-arch.conf .
 
-        year=$(date +%Y)
-        case ${OS_ARCH} {
-            # https://arch-archive.tuna.tsinghua.edu.cn/
-            ( x86_64 | x64v*)         url=https://archive.archlinux.org/repos/$year/   ;;
-            ( i686 | i486 | pentium4) url=https://archive.archlinux32.org/repos/$year/ ;;
-        }
-        month=$(get_date $url)
+    year=$(date +%Y)
+    case ${OS_ARCH} {
+        # https://arch-archive.tuna.tsinghua.edu.cn/
+        ( x86_64 | x64v*)         url=https://archive.archlinux.org/repos/$year/   ;;
+        ( i686 | i486 | pentium4) url=https://archive.archlinux32.org/repos/$year/ ;;
+    }
+    month=$(get_date $url)
 
-        url=${url}${month}
-        day=$(get_date $url)
-        awk -v date="$year-$month-$day" 'BEGIN {
-            gsub("/", "", date)
-            print date
-        }' > /opt/info/archive.txt
+    url=${url}${month}
+    day=$(get_date $url)
+    awk -v date="$year-$month-$day" 'BEGIN {
+        gsub("/", "", date)
+        print date
+    }' > /opt/info/archive.txt
 
-        case ${OS_ARCH} {
-            (x86_64 | x64v*)         url="${url}${day}"'$repo/os/$arch' ;;
-            (i686 | i486 | pentium4) url="${url}${day}"'$arch/$repo'    ;;
-        }
+    case ${OS_ARCH} {
+        (x86_64 | x64v*)         url="${url}${day}"'$repo/os/$arch' ;;
+        (i686 | i486 | pentium4) url="${url}${day}"'$arch/$repo'    ;;
+    }
+    print >&2 $url
 
-        print >&2 $url
-
-        cat > 20-archive.conf <<-ARCHIVE_CONF
+    cat > 20-archive.conf <<-ARCHIVE_CONF
 [core]
 Server = $url
 [extra]
 Server = $url
 ARCHIVE_CONF
-        /opt/pack -Sy
-    }
+
+    /opt/pack -Sy
 UPDATE_ARCHIVE
 
 RUN <<CLEAN
