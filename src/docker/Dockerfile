@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
-ARG TMM_ARCH
-FROM ghcr.io/2moe/zsh-static:${TMM_ARCH} as zsh-tmm-arch
+ARG TMM_ARCH_V0
+FROM ghcr.io/2moe/zsh-static:${TMM_ARCH_V0} as zsh-tmm-arch
 FROM ghcr.io/2cd/pacman-static:x64
 
 RUN rm -rf /etc/pacman.d

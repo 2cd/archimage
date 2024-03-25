@@ -63,15 +63,24 @@ for tmm_arch arch (${(kv)tmm_arch_map}) {
         oci_arch=$os_arch
     }
 
+    platform=linux/$oci_arch
     args=(
         $build_args
-        --platform   linux/$oci_arch
+        --platform   $platform
         #
         --build-arg
         OS_ARCH=$os_arch
         --build-arg
         TMM_ARCH=$tmm_arch
+        --build-arg
     )
+    case $tmm_arch {
+        x64*) tmm_arch_v0=x64      ;;
+        i*86) tmm_arch_v0=x86      ;;
+        *)    tmm_arch_v0=$tmm_arch;;
+    }
+    args+=TMM_ARCH_V0=$tmm_arch_v0
+
     repo=${arch_repo}
     plain=true
     for v (ARCHIVE BASE BASE_DEV TESTING SLIM) {
