@@ -1,0 +1,77 @@
+# pacman -Sy core/pacman-mirrorlist
+# https://github.com/archlinuxarm/PKGBUILDs/blob/master/core/pacman-mirrorlist/mirrorlist
+#
+# Arch Linux ARM repository mirrorlist
+
+### Mirrors by Region
+
+### United States
+## California
+Server = https://ca.us.mirror.archlinuxarm.org/$arch/$repo
+## Florida
+# Server = https://fl.us.mirror.archlinuxarm.org/$arch/$repo
+## New Jersey
+# Server = http://nj.us.mirror.archlinuxarm.org/$arch/$repo
+
+### China
+Server = https://mirrors.cernet.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirrors.bfsu.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirror.bjtu.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirrors.hit.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirror.nju.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirrors.pku.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirrors.ynu.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirrors.bupt.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirrors.njtech.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirror.nyist.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirror.sjtu.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirror.iscas.ac.cn/archlinuxarm/$arch/$repo
+# Server = https://mirror.lzu.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirrors.jlu.edu.cn/archlinuxarm/$arch/$repo
+# Server = https://mirrors.cqupt.edu.cn/archlinuxarm/$arch/$repo
+
+### Germany
+## Aachen
+# Server = https://de3.mirror.archlinuxarm.org/$arch/$repo
+## Berlin
+# Server = http://de.mirror.archlinuxarm.org/$arch/$repo
+## Coburg
+# Server = http://de4.mirror.archlinuxarm.org/$arch/$repo
+## Falkenstein
+Server = https://eu.mirror.archlinuxarm.org/$arch/$repo
+# Server = http://de5.mirror.archlinuxarm.org/$arch/$repo
+
+### Denmark
+## Aalborg
+# Server = http://dk.mirror.archlinuxarm.org/$arch/$repo
+
+### Greece
+## Athens
+# Server = http://gr.mirror.archlinuxarm.org/$arch/$repo
+
+### Hungary
+## Budapest
+# Server = http://hu.mirror.archlinuxarm.org/$arch/$repo
+
+### Japan
+## Tokyo
+# Server = https://jp.mirror.archlinuxarm.org/$arch/$repo
+
+### Singapore
+# Server = https://sg.mirror.archlinuxarm.org/$arch/$repo
+
+### Taiwan
+## Hsinchu
+# Server = http://tw2.mirror.archlinuxarm.org/$arch/$repo
+## New Taipei City
+# Server = http://tw.mirror.archlinuxarm.org/$arch/$repo
+
+### United Kingdom
+## London
+# Server = https://uk.mirror.archlinuxarm.org/$arch/$repo
+
+#
+## Geo-IP based mirror selection and load balancing
+# Server = http://mirror.archlinuxarm.org/$arch/$repo

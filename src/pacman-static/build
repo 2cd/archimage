@@ -1,0 +1,40 @@
+#!/usr/bin/env zsh
+set -fexo pipefail
+typeset -x DOCKER_BUILDKIT=1
+local -r src_dir=${0:a:h}
+
+# repo=reg.tmoe.me:2096/pkgs/pacman-static:x64
+repo=ghcr.io/2cd/pacman-static:x64
+
+context=$(
+    cd $src_dir/../../assets/etc || exit 1
+    pwd
+)
+get_region() {
+    language=$LANG[(ws^.^)1]
+    region=$language[(ws^_^)2]
+
+    # if region.is_empty()
+    if ((! #region)) {
+        region=US
+    }
+    print $region
+}
+
+args=(
+    build
+    --progress=plain
+    #
+    --build-arg
+    REGION=$(get_region)
+
+    --build-arg
+    OS_ARCH="x86_64"
+    #
+    --platform=linux/amd64
+    --tag $repo
+    --file Dockerfile
+    $context
+)
+docker $args
+docker push $repo

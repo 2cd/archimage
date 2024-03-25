@@ -1,0 +1,23 @@
+NOTE:
+
+PGP checking is disabled by default.
+Do not use the http(no tls) mirror source in this case.
+
+Default:
+    cd /etc/pacman.d/options/
+    ln -svf bak/siglevel-never.conf ./sig-level.conf
+
+You can change it:
+    cd /etc/pacman.d/options/
+    # siglevel-required, siglevel-optional
+    ln -svf bak/siglevel-required.conf ./sig-level.conf
+    pacman-key --init
+
+    # for x86_64
+        pacman-key --populate archlinux
+    # for aarch64, arm*
+        pacman -S core/archlinuxarm-keyring
+        pacman-key --populate archlinuxarm
+    # for i686, i486, pentium4
+        pacman -S --needed core/archlinux32-keyring
+        pacman-key --populate archlinux32
