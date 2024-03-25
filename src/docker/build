@@ -21,21 +21,20 @@ build_args=(
 
 local -A tmm_arch_map=(
     # tmm_arch      os_arch,oci_arch
-    # x64             x86_64,amd64
-    # x64v2           x86_64,amd64/v2
-    # x64v3           x86_64,amd64/v3
-    # amd64/v4 -> v3
-    x64v4           x86_64,amd64/v3
-    # rv64gc          riscv64
-    # arm64           aarch64,arm64
-    # armv7a          armv7h,arm/v7
-    # ppc64le         powerpc64le,ppc64le
-    # ppc             powerpc
-    # ppc64           powerpc64
-    # loong64         loong64
-    # i486            i486,386
-    # i686            i686,386
-    # x86             pentium4,386
+    x64             x86_64,amd64
+    x64v2           x86_64,amd64/v2
+    x64v3           x86_64,amd64/v3
+    x64v4           x86_64,amd64/v3  # amd64/v4 -> v3
+    rv64gc          riscv64
+    arm64           aarch64,arm64
+    armv7a          armv7h,arm/v7
+    ppc64le         powerpc64le,ppc64le
+    ppc             powerpc
+    ppc64           powerpc64
+    loong64         loong64
+    i486            i486,386
+    i686            i686,386
+    x86             pentium4,386
     # armv6           armv6h,arm/v6
     # armv5te         arm,arm/v5
 )
@@ -50,12 +49,16 @@ arch_repo=ghcr.io/2cd/arch
 # BASE_DEV=true
 # TESTING=true
 # SLIM=true
-
+today=$(date --utc +%Y-%m-%d)
+ARCHIMG_TMM_ARCH=${ARCHIMG_TMM_ARCH:-x64v2}
 for tmm_arch arch (${(kv)tmm_arch_map}) {
+    if [[ ${ARCHIMG_TMM_ARCH} != $tmm_arch ]] {
+        continue
+    }
+
     arch_arr=(${(s^,^)arch})
     os_arch=$arch_arr[1]
     oci_arch=$arch_arr[2]
-
     if ((! #oci_arch)) {
         oci_arch=$os_arch
     }
@@ -70,18 +73,20 @@ for tmm_arch arch (${(kv)tmm_arch_map}) {
         TMM_ARCH=$tmm_arch
     )
     repo=${arch_repo}
+    plain=true
     for v (ARCHIVE BASE BASE_DEV TESTING SLIM) {
         if {${(P)v}} {
             lower=${(L)v}
             case $lower {
                 (archive | testing)
                     if [[ $tmm_arch != x64 ]] {
-                        continue
+                        exit
                     }
                 ;;
+                (base_dev) lower=dev ;|
                 (base*)
                     if [[ $tmm_arch == x64v4 ]] {
-                        continue
+                        exit
                     }
                 ;;
             }
@@ -89,11 +94,17 @@ for tmm_arch arch (${(kv)tmm_arch_map}) {
                 --build-arg
                 $v=true
             )
-            if [[ $lower == base_dev ]] {
-                lower=dev
-            }
+            plain=false
             repo=${arch_repo}-$lower
         }
+    }
+
+    unset date_repo
+    if {$plain} {
+        date_repo=${repo}:${tmm_arch}-${today}
+        args+=(
+            --tag $date_repo
+        )
     }
 
     repo+=:$tmm_arch
@@ -104,4 +115,8 @@ for tmm_arch arch (${(kv)tmm_arch_map}) {
     )
     docker $args
     docker push $repo
+    if (($+date_repo)) {
+        docker push $date_repo
+    }
+
 }
