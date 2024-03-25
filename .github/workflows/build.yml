@@ -24,13 +24,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: quartx-analytics/ghcr-cleaner@v1
-        with:
-          owner-type: org # or user
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repository-owner: ${{ github.repository_owner }}
-          delete-untagged: true
-
       - uses: actions/checkout@v4
         with:
           ref: dev
