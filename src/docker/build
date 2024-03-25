@@ -72,10 +72,6 @@ for tmm_arch arch (${(kv)tmm_arch_map}) {
     repo=${arch_repo}
     for v (ARCHIVE BASE BASE_DEV TESTING SLIM) {
         if {${(P)v}} {
-            args+=(
-                --build-arg
-                $v=true
-            )
             lower=${(L)v}
             case $lower {
                 (archive | testing)
@@ -89,6 +85,10 @@ for tmm_arch arch (${(kv)tmm_arch_map}) {
                     }
                 ;;
             }
+            args+=(
+                --build-arg
+                $v=true
+            )
             if [[ $lower == base_dev ]] {
                 lower=dev
             }
