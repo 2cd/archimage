@@ -10,11 +10,21 @@ jobs:
       - name: Delete old images
         uses: snok/container-retention-policy@v2
         with:
-          image-names: debian-sid/*
-          cut-off: 2 days ago UTC
+          # ,
+          image-names: debian,ubuntu,arch*,debian-sid
+          cut-off: 1 day ago UTC
           keep-at-least: 1
           account-type: org
-          org-name: ${{ github.repository_owner }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          org-name: 2cd
+          token: ${{ secrets.RM_GHCR_PAT }}
           untagged-only: true
-          token-type: github-token
+
+      - name: Delete 2moe images
+        uses: snok/container-retention-policy@v2
+        with:
+          image-names: '*'
+          cut-off: 1 day ago UTC
+          keep-at-least: 1
+          account-type: personal
+          token: ${{ secrets.RM_GHCR_PAT }}
+          untagged-only: true
