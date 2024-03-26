@@ -9,20 +9,20 @@ jobs:
       fail-fast: false
       matrix:
         arch:
-          # - x64
-          # - x64v2
-          # - x64v3
-          # - x64v4
-          # - rv64gc
-          # - arm64
-          # - armv7a
-          # - ppc64le
-          # - ppc
-          # - ppc64
-          # - loong64
-          # - i486
-          # - i686
-          # - x86
+          - x64
+          - x64v2
+          - x64v3
+          - x64v4
+          - rv64gc
+          - arm64
+          - armv7a
+          - ppc64le
+          - ppc
+          - ppc64
+          - loong64
+          - i486
+          - i686
+          - x86
     runs-on: ubuntu-latest
     defaults:
       run:

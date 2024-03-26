@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 ARG TMM_ARCH_V0
 FROM ghcr.io/2moe/zsh-static:${TMM_ARCH_V0} as zsh-tmm-arch
-FROM ghcr.io/2cd/pacman-static:x64
+FROM ghcr.io/2cd/pacman-static:x64 as pacman
 
 RUN rm -rf /etc/pacman.d
 COPY . /etc
@@ -281,10 +281,13 @@ set -fex
     rm -rfv  /root/*                                 ||:
 CLEAN
 
-# ------------------------
 # SHELL [ "/bin/bash", "-c" ]
 # SHELL ["zsh", "--pipefail", "-fexc"]
 ARG OPT=/opt/bin/
-ENV LANG=C.UTF-8
 COPY --from=zsh-tmm-arch ${OPT}busybox ${OPT}zsh ${OPT}
+# ------------------------
+FROM scratch
+COPY --from=pacman / /
+ENV LANG=C.UTF-8 \
+    PATH=/usr/local/sbin:/usr/local/bin:/usr/local/games:/bin:/usr/games:/opt/sbin:/opt/bin
 CMD [ "bash" ]
