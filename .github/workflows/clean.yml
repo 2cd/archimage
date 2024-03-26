@@ -10,8 +10,8 @@ jobs:
       - name: Delete old images
         uses: snok/container-retention-policy@v2
         with:
-          # ,
-          image-names: debian,ubuntu,arch*,debian-sid
+          # arch*,pacman*,debian*,ubuntu
+          image-names: '*'
           cut-off: 1 day ago UTC
           keep-at-least: 1
           account-type: org

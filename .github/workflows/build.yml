@@ -16,7 +16,7 @@ jobs:
           # - rv64gc
           # - arm64
           # - armv7a
-          - ppc64le
+          # - ppc64le
           # - ppc
           # - ppc64
           # - loong64
@@ -39,7 +39,7 @@ jobs:
         uses: docker/setup-qemu-action@v3
 
       - name: install qemu-user using apt
-        if: contains(fromJson('["ppc", "ppc64", "loong64"]'), matrix.arch)
+        if: contains(fromJson('["ppc64le", "ppc", "ppc64", "loong64"]'), matrix.arch)
         run: |
           sudo apt update
           sudo apt-get install -y qemu-user-static

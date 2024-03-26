@@ -41,8 +41,8 @@ local -A tmm_arch_map=(
 
 arch_repo=ghcr.io/2cd/arch
 # Only for x64: archive, testing
-# x64v4: "", slim
-# all archs(exclude x64v4): "", base, base-devel, slim
+# x64v4, ppc*, loong64: "", slim
+# other: "", base, base-devel, slim
 #
 # ARCHIVE=true
 # BASE=true

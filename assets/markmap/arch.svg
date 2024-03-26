@@ -1,0 +1,810 @@
+<svg viewBox="0 0 425 620" xmlns="http://www.w3.org/2000/svg" class="w-screen h-screen leading-none markmap mm-n98bny-1"
+    style="">
+    <style>
+        svg {
+            background-color: white;
+            color-scheme: light dark;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            svg {
+                background-color: black;
+            }
+        }
+
+        .markmap {
+            --markmap-max-width: none;
+            --markmap-a-color: #0097e6;
+            --markmap-a-hover-color: #00a8ff;
+            --markmap-code-bg: #f0f0f0;
+            --markmap-code-color: #555;
+            --markmap-highlight-bg: #ffeaa7;
+            --markmap-table-border: 1px solid currentColor;
+            --markmap-font: 300 16px/20px sans-serif;
+            font: var(--markmap-font)
+        }
+
+        .markmap-link {
+            fill: none
+        }
+
+        .markmap-node&gt;
+
+        circle {
+            cursor: pointer
+        }
+
+        .markmap-foreign {
+            display: inline-block
+        }
+
+        .markmap-foreign a {
+            color: var(--markmap-a-color)
+        }
+
+        .markmap-foreign a:hover {
+            color: var(--markmap-a-hover-color)
+        }
+
+        .markmap-foreign code {
+            padding: .25em;
+            font-size: calc(1em - 2px);
+            color: var(--markmap-code-color);
+            background-color: var(--markmap-code-bg);
+            border-radius: 2px
+        }
+
+        .markmap-foreign pre {
+            margin: 0
+        }
+
+        .markmap-foreign pre&gt;
+
+        code {
+            display: block
+        }
+
+        .markmap-foreign del {
+            text-decoration: line-through
+        }
+
+        .markmap-foreign em {
+            font-style: italic
+        }
+
+        .markmap-foreign strong {
+            font-weight: 700
+        }
+
+        .markmap-foreign mark {
+            background: var(--markmap-highlight-bg)
+        }
+
+        .markmap-foreign table,
+        .markmap-foreign th,
+        .markmap-foreign td {
+            border-collapse: collapse;
+            border: var(--markmap-table-border)
+        }
+
+        .markmap-foreign img {
+            display: inline-block
+        }
+
+        .markmap-foreign-testing-max {
+            max-width: var(--markmap-max-width)
+        }
+
+        .markmap-foreign-testing-max img {
+            max-width: var(--markmap-max-width);
+            max-height: none
+        }
+    </style>
+    <style class="darkreader darkreader--sync" media="screen"></style>
+    <g transform="translate(14.247155514487758,310.3333435058594) scale(0.5023910149039095)">
+        <path class="markmap-link" data-depth="2" data-path="1.2" d="M50,10C90,10,90,-560,130,-560"
+            stroke="rgb(255, 127, 14)" stroke-width="1.5" style="--darkreader-inline-stroke: #ff8a23;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.5" d="M50,10C90,10,90,-477.5,130,-477.5"
+            stroke="rgb(44, 160, 44)" stroke-width="1.5" style="--darkreader-inline-stroke: #67d567;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.12" d="M50,10C90,10,90,-348.75,130,-348.75"
+            stroke="rgb(227, 119, 194)" stroke-width="1.5" style="--darkreader-inline-stroke: #e376c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.18" d="M50,10C90,10,90,-217.5,130,-217.5"
+            stroke="rgb(31, 119, 180)" stroke-width="1.5" style="--darkreader-inline-stroke: #55a8e2;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.26" d="M50,10C90,10,90,-92.5,130,-92.5"
+            stroke="rgb(23, 190, 207)" stroke-width="1.5" style="--darkreader-inline-stroke: #40daea;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.33" d="M50,10C90,10,90,27.5,130,27.5"
+            stroke="rgb(44, 160, 44)" stroke-width="1.5" style="--darkreader-inline-stroke: #67d567;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.37" d="M50,10C90,10,90,107.5,130,107.5"
+            stroke="rgb(227, 119, 194)" stroke-width="1.5" style="--darkreader-inline-stroke: #e376c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.41" d="M50,10C90,10,90,187.5,130,187.5"
+            stroke="rgb(31, 119, 180)" stroke-width="1.5" style="--darkreader-inline-stroke: #55a8e2;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.45" d="M50,10C90,10,90,267.5,130,267.5"
+            stroke="rgb(148, 103, 189)" stroke-width="1.5" style="--darkreader-inline-stroke: #9b71c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.49" d="M50,10C90,10,90,335,130,335"
+            stroke="rgb(188, 189, 34)" stroke-width="1.5" style="--darkreader-inline-stroke: #dedf4f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.52" d="M50,10C90,10,90,390,130,390"
+            stroke="rgb(255, 127, 14)" stroke-width="1.5" style="--darkreader-inline-stroke: #ff8a23;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.55" d="M50,10C90,10,90,457.5,130,457.5"
+            stroke="rgb(148, 103, 189)" stroke-width="1.5" style="--darkreader-inline-stroke: #9b71c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.59" d="M50,10C90,10,90,525,130,525"
+            stroke="rgb(188, 189, 34)" stroke-width="1.5" style="--darkreader-inline-stroke: #dedf4f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="2" data-path="1.62" d="M50,10C90,10,90,580,130,580"
+            stroke="rgb(255, 127, 14)" stroke-width="1.5" style="--darkreader-inline-stroke: #ff8a23;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.2.3" d="M173,-560C213,-560,213,-572.5,253,-572.5"
+            stroke="rgb(148, 103, 189)" stroke-width="1.5" style="--darkreader-inline-stroke: #9b71c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.2.4" d="M173,-560C213,-560,213,-547.5,253,-547.5"
+            stroke="rgb(23, 190, 207)" stroke-width="1.5" style="--darkreader-inline-stroke: #40daea;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.5.6" d="M190,-477.5C230,-477.5,230,-517.5,270,-517.5"
+            stroke="rgb(31, 119, 180)" stroke-width="1.5" style="--darkreader-inline-stroke: #55a8e2;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.5.7" d="M190,-477.5C230,-477.5,230,-492.5,270,-492.5"
+            stroke="rgb(255, 127, 14)" stroke-width="1.5" style="--darkreader-inline-stroke: #ff8a23;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.5.8" d="M190,-477.5C230,-477.5,230,-437.5,270,-437.5"
+            stroke="rgb(214, 39, 40)" stroke-width="1.5" style="--darkreader-inline-stroke: #dc3e3f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.12.13" d="M190,-348.75C230,-348.75,230,-382.5,270,-382.5"
+            stroke="rgb(127, 127, 127)" stroke-width="1.5" style="--darkreader-inline-stroke: #988f81;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.12.14" d="M190,-348.75C230,-348.75,230,-357.5,270,-357.5"
+            stroke="rgb(188, 189, 34)" stroke-width="1.5" style="--darkreader-inline-stroke: #dedf4f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.12.15" d="M190,-348.75C230,-348.75,230,-315,270,-315"
+            stroke="rgb(23, 190, 207)" stroke-width="1.5" style="--darkreader-inline-stroke: #40daea;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.18.19" d="M190,-217.5C230,-217.5,230,-260,270,-260"
+            stroke="rgb(255, 127, 14)" stroke-width="1.5" style="--darkreader-inline-stroke: #ff8a23;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.18.22" d="M190,-217.5C230,-217.5,230,-217.5,270,-217.5"
+            stroke="rgb(148, 103, 189)" stroke-width="1.5" style="--darkreader-inline-stroke: #9b71c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.18.23" d="M190,-217.5C230,-217.5,230,-175,270,-175"
+            stroke="rgb(140, 86, 75)" stroke-width="1.5" style="--darkreader-inline-stroke: #b9867c;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.26.27" d="M197,-92.5C237,-92.5,237,-132.5,277,-132.5"
+            stroke="rgb(31, 119, 180)" stroke-width="1.5" style="--darkreader-inline-stroke: #55a8e2;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.26.28" d="M197,-92.5C237,-92.5,237,-107.5,277,-107.5"
+            stroke="rgb(255, 127, 14)" stroke-width="1.5" style="--darkreader-inline-stroke: #ff8a23;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.26.29" d="M197,-92.5C237,-92.5,237,-52.5,277,-52.5"
+            stroke="rgb(188, 189, 34)" stroke-width="1.5" style="--darkreader-inline-stroke: #dedf4f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.33.34" d="M195,27.5C235,27.5,235,2.5,275,2.5"
+            stroke="rgb(214, 39, 40)" stroke-width="1.5" style="--darkreader-inline-stroke: #dc3e3f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.33.35" d="M195,27.5C235,27.5,235,27.5,275,27.5"
+            stroke="rgb(148, 103, 189)" stroke-width="1.5" style="--darkreader-inline-stroke: #9b71c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.33.36" d="M195,27.5C235,27.5,235,52.5,275,52.5"
+            stroke="rgb(140, 86, 75)" stroke-width="1.5" style="--darkreader-inline-stroke: #b9867c;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.37.38" d="M203,107.5C243,107.5,243,82.5,283,82.5"
+            stroke="rgb(127, 127, 127)" stroke-width="1.5" style="--darkreader-inline-stroke: #988f81;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.37.39" d="M203,107.5C243,107.5,243,107.5,283,107.5"
+            stroke="rgb(188, 189, 34)" stroke-width="1.5" style="--darkreader-inline-stroke: #dedf4f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.37.40" d="M203,107.5C243,107.5,243,132.5,283,132.5"
+            stroke="rgb(23, 190, 207)" stroke-width="1.5" style="--darkreader-inline-stroke: #40daea;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.41.42" d="M207,187.5C247,187.5,247,162.5,287,162.5"
+            stroke="rgb(255, 127, 14)" stroke-width="1.5" style="--darkreader-inline-stroke: #ff8a23;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.41.43" d="M207,187.5C247,187.5,247,187.5,287,187.5"
+            stroke="rgb(44, 160, 44)" stroke-width="1.5" style="--darkreader-inline-stroke: #67d567;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.41.44" d="M207,187.5C247,187.5,247,212.5,287,212.5"
+            stroke="rgb(214, 39, 40)" stroke-width="1.5" style="--darkreader-inline-stroke: #dc3e3f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.45.46" d="M173,267.5C213,267.5,213,242.5,253,242.5"
+            stroke="rgb(140, 86, 75)" stroke-width="1.5" style="--darkreader-inline-stroke: #b9867c;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.45.47" d="M173,267.5C213,267.5,213,267.5,253,267.5"
+            stroke="rgb(227, 119, 194)" stroke-width="1.5" style="--darkreader-inline-stroke: #e376c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.45.48" d="M173,267.5C213,267.5,213,292.5,253,292.5"
+            stroke="rgb(127, 127, 127)" stroke-width="1.5" style="--darkreader-inline-stroke: #988f81;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.49.50" d="M178,335C218,335,218,322.5,258,322.5"
+            stroke="rgb(23, 190, 207)" stroke-width="1.5" style="--darkreader-inline-stroke: #40daea;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.49.51" d="M178,335C218,335,218,347.5,258,347.5"
+            stroke="rgb(31, 119, 180)" stroke-width="1.5" style="--darkreader-inline-stroke: #55a8e2;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.52.53" d="M178,390C218,390,218,377.5,258,377.5"
+            stroke="rgb(44, 160, 44)" stroke-width="1.5" style="--darkreader-inline-stroke: #67d567;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.52.54" d="M178,390C218,390,218,402.5,258,402.5"
+            stroke="rgb(214, 39, 40)" stroke-width="1.5" style="--darkreader-inline-stroke: #dc3e3f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.55.56" d="M206,457.5C246,457.5,246,432.5,286,432.5"
+            stroke="rgb(140, 86, 75)" stroke-width="1.5" style="--darkreader-inline-stroke: #b9867c;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.55.57" d="M206,457.5C246,457.5,246,457.5,286,457.5"
+            stroke="rgb(227, 119, 194)" stroke-width="1.5" style="--darkreader-inline-stroke: #e376c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.55.58" d="M206,457.5C246,457.5,246,482.5,286,482.5"
+            stroke="rgb(127, 127, 127)" stroke-width="1.5" style="--darkreader-inline-stroke: #988f81;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.59.60" d="M193,525C233,525,233,512.5,273,512.5"
+            stroke="rgb(23, 190, 207)" stroke-width="1.5" style="--darkreader-inline-stroke: #40daea;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.59.61" d="M193,525C233,525,233,537.5,273,537.5"
+            stroke="rgb(31, 119, 180)" stroke-width="1.5" style="--darkreader-inline-stroke: #55a8e2;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.62.63" d="M175,580C215,580,215,567.5,255,567.5"
+            stroke="rgb(44, 160, 44)" stroke-width="1.5" style="--darkreader-inline-stroke: #67d567;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="3" data-path="1.62.64" d="M175,580C215,580,215,592.5,255,592.5"
+            stroke="rgb(214, 39, 40)" stroke-width="1.5" style="--darkreader-inline-stroke: #dc3e3f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.5.8.9" d="M371,-437.5C411,-437.5,411,-462.5,451,-462.5"
+            stroke="rgb(140, 86, 75)" stroke-width="1.5" style="--darkreader-inline-stroke: #b9867c;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.5.8.10" d="M371,-437.5C411,-437.5,411,-437.5,451,-437.5"
+            stroke="rgb(227, 119, 194)" stroke-width="1.5" style="--darkreader-inline-stroke: #e376c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.5.8.11" d="M371,-437.5C411,-437.5,411,-412.5,451,-412.5"
+            stroke="rgb(127, 127, 127)" stroke-width="1.5" style="--darkreader-inline-stroke: #988f81;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.12.15.16" d="M371,-315C411,-315,411,-327.5,451,-327.5"
+            stroke="rgb(188, 189, 34)" stroke-width="1.5" style="--darkreader-inline-stroke: #dedf4f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.12.15.17" d="M371,-315C411,-315,411,-302.5,451,-302.5"
+            stroke="rgb(23, 190, 207)" stroke-width="1.5" style="--darkreader-inline-stroke: #40daea;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.18.19.20" d="M352,-260C392,-260,392,-272.5,432,-272.5"
+            stroke="rgb(44, 160, 44)" stroke-width="1.5" style="--darkreader-inline-stroke: #67d567;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.18.19.21" d="M352,-260C392,-260,392,-247.5,432,-247.5"
+            stroke="rgb(214, 39, 40)" stroke-width="1.5" style="--darkreader-inline-stroke: #dc3e3f;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.18.23.24" d="M371,-175C411,-175,411,-187.5,451,-187.5"
+            stroke="rgb(227, 119, 194)" stroke-width="1.5" style="--darkreader-inline-stroke: #e376c1;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.18.23.25" d="M371,-175C411,-175,411,-162.5,451,-162.5"
+            stroke="rgb(127, 127, 127)" stroke-width="1.5" style="--darkreader-inline-stroke: #988f81;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.26.29.30" d="M382,-52.5C422,-52.5,422,-77.5,462,-77.5"
+            stroke="rgb(23, 190, 207)" stroke-width="1.5" style="--darkreader-inline-stroke: #40daea;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.26.29.31" d="M382,-52.5C422,-52.5,422,-52.5,462,-52.5"
+            stroke="rgb(31, 119, 180)" stroke-width="1.5" style="--darkreader-inline-stroke: #55a8e2;"
+            data-darkreader-inline-stroke=""></path>
+        <path class="markmap-link" data-depth="4" data-path="1.26.29.32" d="M382,-52.5C422,-52.5,422,-27.5,462,-27.5"
+            stroke="rgb(255, 127, 14)" stroke-width="1.5" style="--darkreader-inline-stroke: #ff8a23;"
+            data-darkreader-inline-stroke=""></path>
+        <g data-depth="4" data-path="1.26.29.32" transform="translate(462, -47.5)" class="markmap-node">
+            <line x1="-1" x2="270" y1="20" y2="20" stroke="rgb(255, 127, 14)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #ae5200;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="252" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml"><a
+                        href="https://riscv.mirror.pkgbuild.com/">https://riscv.mirror.pkgbuild.com/</a></div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.26.29.31" transform="translate(462, -72.5)" class="markmap-node">
+            <line x1="-1" x2="144" y1="20" y2="20" stroke="rgb(31, 119, 180)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #1c6ca4;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="126" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">features: IMAFDC</div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.26.29.30" transform="translate(462, -97.5)" class="markmap-node">
+            <line x1="-1" x2="115" y1="20" y2="20" stroke="rgb(23, 190, 207)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #139aa7;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="97" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">64-Bit RISC-V</div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.18.23.25" transform="translate(451, -182.5)" class="markmap-node">
+            <line x1="-1" x2="140" y1="20" y2="20" stroke="rgb(127, 127, 127)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #625b51;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="122" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">AMD Zen 4 cores</div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.18.23.24" transform="translate(451, -207.5)" class="markmap-node">
+            <line x1="-1" x2="355" y1="20" y2="20" stroke="rgb(227, 119, 194)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7d1a5f;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="337" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">feature level matches the 2017 Intel Skylake-X</div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.18.19.21" transform="translate(432, -267.5)" class="markmap-node">
+            <line x1="-1" x2="135" y1="20" y2="20" stroke="rgb(214, 39, 40)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #971c1c;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="117" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">linux/amd64/v4</div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.18.19.20" transform="translate(432, -292.5)" class="markmap-node">
+            <line x1="-1" x2="135" y1="20" y2="20" stroke="rgb(44, 160, 44)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #2a982a;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="117" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">linux/amd64/v3</div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.12.15.17" transform="translate(451, -322.5)" class="markmap-node">
+            <line x1="-1" x2="330" y1="20" y2="20" stroke="rgb(23, 190, 207)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #139aa7;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="312" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">AMD Excavator and newer AMD "big" cores</div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.12.15.16" transform="translate(451, -347.5)" class="markmap-node">
+            <line x1="-1" x2="342" y1="20" y2="20" stroke="rgb(188, 189, 34)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #9f9f1d;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="324" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">feature level matches the 2013 Intel Haswell</div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.5.8.11" transform="translate(451, -432.5)" class="markmap-node">
+            <line x1="-1" x2="279" y1="20" y2="20" stroke="rgb(127, 127, 127)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #625b51;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="261" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml"><a
+                        href="https://somegit.dev/ALHP/ALHP.GO">https://somegit.dev/ALHP/ALHP.GO</a></div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.5.8.10" transform="translate(451, -457.5)" class="markmap-node">
+            <line x1="-1" x2="330" y1="20" y2="20" stroke="rgb(227, 119, 194)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7d1a5f;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="312" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">AMD Bulldozer and newer AMD "big" cores</div>
+            </foreignObject>
+        </g>
+        <g data-depth="4" data-path="1.5.8.9" transform="translate(451, -482.5)" class="markmap-node">
+            <line x1="-1" x2="350" y1="20" y2="20" stroke="rgb(140, 86, 75)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7c4c42;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="332" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">feature level matches the 2008 Intel Nehalem</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.62.64" transform="translate(255, 572.5)" class="markmap-node">
+            <line x1="-1" x2="147" y1="20" y2="20" stroke="rgb(214, 39, 40)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #971c1c;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="129" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: powerpc</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.62.63" transform="translate(255, 547.5)" class="markmap-node">
+            <line x1="-1" x2="161" y1="20" y2="20" stroke="rgb(44, 160, 44)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #2a982a;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="143" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/ppc</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.59.61" transform="translate(273, 517.5)" class="markmap-node">
+            <line x1="-1" x2="165" y1="20" y2="20" stroke="rgb(31, 119, 180)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #1c6ca4;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="147" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: powerpc64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.59.60" transform="translate(273, 492.5)" class="markmap-node">
+            <line x1="-1" x2="179" y1="20" y2="20" stroke="rgb(23, 190, 207)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #139aa7;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="161" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/ppc64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.55.58" transform="translate(286, 462.5)" class="markmap-node">
+            <line x1="-1" x2="316" y1="20" y2="20" stroke="rgb(127, 127, 127)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #625b51;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="298" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">description: <a
+                        href="https://archlinuxpower.org/">https://archlinuxpower.org/</a></div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.55.57" transform="translate(286, 437.5)" class="markmap-node">
+            <line x1="-1" x2="178" y1="20" y2="20" stroke="rgb(227, 119, 194)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7d1a5f;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="160" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: powerpc64le</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.55.56" transform="translate(286, 412.5)" class="markmap-node">
+            <line x1="-1" x2="192" y1="20" y2="20" stroke="rgb(140, 86, 75)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7c4c42;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="174" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/ppc64le</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.52.54" transform="translate(258, 382.5)" class="markmap-node">
+            <line x1="-1" x2="113" y1="20" y2="20" stroke="rgb(214, 39, 40)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #971c1c;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="95" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: i486</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.52.53" transform="translate(258, 357.5)" class="markmap-node">
+            <line x1="-1" x2="160" y1="20" y2="20" stroke="rgb(44, 160, 44)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #2a982a;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="142" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/386</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.49.51" transform="translate(258, 327.5)" class="markmap-node">
+            <line x1="-1" x2="113" y1="20" y2="20" stroke="rgb(31, 119, 180)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #1c6ca4;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="95" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: i686</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.49.50" transform="translate(258, 302.5)" class="markmap-node">
+            <line x1="-1" x2="160" y1="20" y2="20" stroke="rgb(23, 190, 207)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #139aa7;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="142" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/386</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.45.48" transform="translate(253, 272.5)" class="markmap-node">
+            <line x1="-1" x2="383" y1="20" y2="20" stroke="rgb(127, 127, 127)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #625b51;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="365" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">description: <a
+                        href="https://archlinux32.org/architecture/">https://archlinux32.org/architecture/</a></div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.45.47" transform="translate(253, 247.5)" class="markmap-node">
+            <line x1="-1" x2="154" y1="20" y2="20" stroke="rgb(227, 119, 194)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7d1a5f;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="136" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: pentium4</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.45.46" transform="translate(253, 222.5)" class="markmap-node">
+            <line x1="-1" x2="160" y1="20" y2="20" stroke="rgb(140, 86, 75)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7c4c42;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="142" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/386</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.41.44" transform="translate(287, 192.5)" class="markmap-node">
+            <line x1="-1" x2="312" y1="20" y2="20" stroke="rgb(214, 39, 40)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #971c1c;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="294" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">description: <a
+                        href="https://loongarchlinux.org/">https://loongarchlinux.org/</a></div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.41.43" transform="translate(287, 167.5)" class="markmap-node">
+            <line x1="-1" x2="143" y1="20" y2="20" stroke="rgb(44, 160, 44)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #2a982a;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="125" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: loong64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.41.42" transform="translate(287, 142.5)" class="markmap-node">
+            <line x1="-1" x2="194" y1="20" y2="20" stroke="rgb(255, 127, 14)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #ae5200;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="176" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/loong64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.37.40" transform="translate(283, 112.5)" class="markmap-node">
+            <line x1="-1" x2="244" y1="20" y2="20" stroke="rgb(23, 190, 207)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #139aa7;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="226" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">features: +vfp3, -d32, +thumb2</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.37.39" transform="translate(283, 87.5)" class="markmap-node">
+            <line x1="-1" x2="139" y1="20" y2="20" stroke="rgb(188, 189, 34)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #9f9f1d;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="121" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: armv7h</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.37.38" transform="translate(283, 62.5)" class="markmap-node">
+            <line x1="-1" x2="186" y1="20" y2="20" stroke="rgb(127, 127, 127)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #625b51;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="168" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/arm/v7</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.33.36" transform="translate(275, 32.5)" class="markmap-node">
+            <line x1="-1" x2="423" y1="20" y2="20" stroke="rgb(140, 86, 75)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7c4c42;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="405" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">description: <a
+                        href="https://archlinuxarm.org/platforms/armv8">https://archlinuxarm.org/platforms/armv8</a>
+                </div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.33.35" transform="translate(275, 7.5)" class="markmap-node">
+            <line x1="-1" x2="142" y1="20" y2="20" stroke="rgb(148, 103, 189)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #553375;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="124" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: aarch64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.33.34" transform="translate(275, -17.5)" class="markmap-node">
+            <line x1="-1" x2="181" y1="20" y2="20" stroke="rgb(214, 39, 40)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #971c1c;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="163" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/arm64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.26.29" transform="translate(277, -72.5)" class="markmap-node">
+            <line x1="-1" x2="107" y1="20" y2="20" stroke="rgb(188, 189, 34)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #9f9f1d;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="105" cy="20" r="6" stroke="rgb(188, 189, 34)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #dedf4f;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="89" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">description:</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.26.28" transform="translate(277, -127.5)" class="markmap-node">
+            <line x1="-1" x2="134" y1="20" y2="20" stroke="rgb(255, 127, 14)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #ae5200;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="116" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: riscv64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.26.27" transform="translate(277, -152.5)" class="markmap-node">
+            <line x1="-1" x2="185" y1="20" y2="20" stroke="rgb(31, 119, 180)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #1c6ca4;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="167" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/riscv64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.18.23" transform="translate(270, -195)" class="markmap-node">
+            <line x1="-1" x2="103" y1="20" y2="20" stroke="rgb(140, 86, 75)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7c4c42;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="101" cy="20" r="6" stroke="rgb(140, 86, 75)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #b9867c;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="85" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">description</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.18.22" transform="translate(270, -237.5)" class="markmap-node">
+            <line x1="-1" x2="134" y1="20" y2="20" stroke="rgb(148, 103, 189)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #553375;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="116" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: x86_64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.18.19" transform="translate(270, -280)" class="markmap-node">
+            <line x1="-1" x2="84" y1="20" y2="20" stroke="rgb(255, 127, 14)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #ae5200;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="82" cy="20" r="6" stroke="rgb(255, 127, 14)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #ff8a23;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="66" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.12.15" transform="translate(270, -335)" class="markmap-node">
+            <line x1="-1" x2="103" y1="20" y2="20" stroke="rgb(23, 190, 207)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #139aa7;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="101" cy="20" r="6" stroke="rgb(23, 190, 207)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #40daea;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="85" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">description</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.12.14" transform="translate(270, -377.5)" class="markmap-node">
+            <line x1="-1" x2="134" y1="20" y2="20" stroke="rgb(188, 189, 34)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #9f9f1d;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="116" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: x86_64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.12.13" transform="translate(270, -402.5)" class="markmap-node">
+            <line x1="-1" x2="208" y1="20" y2="20" stroke="rgb(127, 127, 127)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #625b51;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="190" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/amd64/v3</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.5.8" transform="translate(270, -457.5)" class="markmap-node">
+            <line x1="-1" x2="103" y1="20" y2="20" stroke="rgb(214, 39, 40)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #971c1c;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="101" cy="20" r="6" stroke="rgb(214, 39, 40)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #dc3e3f;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="85" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">description</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.5.7" transform="translate(270, -512.5)" class="markmap-node">
+            <line x1="-1" x2="134" y1="20" y2="20" stroke="rgb(255, 127, 14)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #ae5200;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="116" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: x86_64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.5.6" transform="translate(270, -537.5)" class="markmap-node">
+            <line x1="-1" x2="208" y1="20" y2="20" stroke="rgb(31, 119, 180)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #1c6ca4;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="190" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/amd64/v2</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.2.4" transform="translate(253, -567.5)" class="markmap-node">
+            <line x1="-1" x2="134" y1="20" y2="20" stroke="rgb(23, 190, 207)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #139aa7;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="116" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">os-arch: x86_64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="3" data-path="1.2.3" transform="translate(253, -592.5)" class="markmap-node">
+            <line x1="-1" x2="184" y1="20" y2="20" stroke="rgb(148, 103, 189)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #553375;" data-darkreader-inline-stroke=""></line>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="166" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">platform: linux/amd64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.62" transform="translate(130, 560)" class="markmap-node">
+            <line x1="-1" x2="47" y1="20" y2="20" stroke="rgb(255, 127, 14)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #ae5200;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="45" cy="20" r="6" stroke="rgb(255, 127, 14)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #ff8a23;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="29" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">ppc</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.59" transform="translate(130, 505)" class="markmap-node">
+            <line x1="-1" x2="65" y1="20" y2="20" stroke="rgb(188, 189, 34)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #9f9f1d;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="63" cy="20" r="6" stroke="rgb(188, 189, 34)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #dedf4f;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="47" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">ppc64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.55" transform="translate(130, 437.5)" class="markmap-node">
+            <line x1="-1" x2="78" y1="20" y2="20" stroke="rgb(148, 103, 189)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #553375;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="76" cy="20" r="6" stroke="rgb(148, 103, 189)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #9b71c1;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="60" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">ppc64le</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.52" transform="translate(130, 370)" class="markmap-node">
+            <line x1="-1" x2="50" y1="20" y2="20" stroke="rgb(255, 127, 14)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #ae5200;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="48" cy="20" r="6" stroke="rgb(255, 127, 14)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #ff8a23;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="32" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">i486</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.49" transform="translate(130, 315)" class="markmap-node">
+            <line x1="-1" x2="50" y1="20" y2="20" stroke="rgb(188, 189, 34)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #9f9f1d;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="48" cy="20" r="6" stroke="rgb(188, 189, 34)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #dedf4f;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="32" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">i686</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.45" transform="translate(130, 247.5)" class="markmap-node">
+            <line x1="-1" x2="45" y1="20" y2="20" stroke="rgb(148, 103, 189)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #553375;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="43" cy="20" r="6" stroke="rgb(148, 103, 189)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #9b71c1;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="27" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">x86</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.41" transform="translate(130, 167.5)" class="markmap-node">
+            <line x1="-1" x2="79" y1="20" y2="20" stroke="rgb(31, 119, 180)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #1c6ca4;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="77" cy="20" r="6" stroke="rgb(31, 119, 180)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #55a8e2;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="61" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">loong64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.37" transform="translate(130, 87.5)" class="markmap-node">
+            <line x1="-1" x2="75" y1="20" y2="20" stroke="rgb(227, 119, 194)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7d1a5f;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="73" cy="20" r="6" stroke="rgb(227, 119, 194)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #e376c1;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="57" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">armv7a</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.33" transform="translate(130, 7.5)" class="markmap-node">
+            <line x1="-1" x2="67" y1="20" y2="20" stroke="rgb(44, 160, 44)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #2a982a;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="65" cy="20" r="6" stroke="rgb(44, 160, 44)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #67d567;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="49" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">arm64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.26" transform="translate(130, -112.5)" class="markmap-node">
+            <line x1="-1" x2="69" y1="20" y2="20" stroke="rgb(23, 190, 207)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #139aa7;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="67" cy="20" r="6" stroke="rgb(23, 190, 207)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #40daea;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="51" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">rv64gc</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.18" transform="translate(130, -237.5)" class="markmap-node">
+            <line x1="-1" x2="62" y1="20" y2="20" stroke="rgb(31, 119, 180)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #1c6ca4;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="60" cy="20" r="6" stroke="rgb(31, 119, 180)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #55a8e2;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="44" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">x64v4</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.12" transform="translate(130, -368.75)" class="markmap-node">
+            <line x1="-1" x2="62" y1="20" y2="20" stroke="rgb(227, 119, 194)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #7d1a5f;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="60" cy="20" r="6" stroke="rgb(227, 119, 194)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #e376c1;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="44" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">x64v3</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.5" transform="translate(130, -497.5)" class="markmap-node">
+            <line x1="-1" x2="62" y1="20" y2="20" stroke="rgb(44, 160, 44)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #2a982a;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="60" cy="20" r="6" stroke="rgb(44, 160, 44)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #67d567;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="44" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">x64v2</div>
+            </foreignObject>
+        </g>
+        <g data-depth="2" data-path="1.2" transform="translate(130, -580)" class="markmap-node">
+            <line x1="-1" x2="45" y1="20" y2="20" stroke="rgb(255, 127, 14)" stroke-width="1.5"
+                style="--darkreader-inline-stroke: #ae5200;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="43" cy="20" r="6" stroke="rgb(255, 127, 14)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #ff8a23;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="27" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">x64</div>
+            </foreignObject>
+        </g>
+        <g data-depth="1" data-path="1" transform="translate(0,-10)" class="markmap-node">
+            <line x1="-1" x2="52" y1="20" y2="20" stroke="rgb(31, 119, 180)" stroke-width="2"
+                style="--darkreader-inline-stroke: #1c6ca4;" data-darkreader-inline-stroke=""></line>
+            <circle stroke-width="1.5" cx="50" cy="20" r="6" stroke="rgb(31, 119, 180)" fill="rgb(255, 255, 255)"
+                style="--darkreader-inline-fill: #e8e6e3; --darkreader-inline-stroke: #55a8e2;"
+                data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></circle>
+            <foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="34" height="20">
+                <div xmlns="http://www.w3.org/1999/xhtml">arch</div>
+            </foreignObject>
+        </g>
+    </g>
+</svg>

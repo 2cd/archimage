@@ -55,7 +55,6 @@ GET_PACMAN
 # -----------------
 # -----------------
 FROM zsh as ca-certs
-# ENV PATH=/opt/bin:/opt/busybox
 # src: ../../ca-certificates/extracted/tls-ca-bundle.pem
 # link: /etc/ssl/certs/ca-certificates.crt
 ARG CA_FILE=/etc/ca-certificates/extracted/tls-ca-bundle.pem
@@ -147,7 +146,7 @@ PACMAN_ALT
 
 COPY --chmod=755 <<'PACMAN_INSTALL' ${OPT}/pacman-install
 #!/opt/bin/zsh
-    set -feo pipefail
+set -feo pipefail
     stderr() {
         print -Pr >&2 -- "$*"
     }
@@ -158,11 +157,10 @@ COPY --chmod=755 <<'PACMAN_INSTALL' ${OPT}/pacman-install
     cmd=()
     if (( $(id -u) != 0 )) {
         stderr '%F{yellow}[WARN]%f You should run it as %F{magenta}root%f.'
-        if (($+commands[sudo])) {
-            cmd+=sudo
-        }
-        if (($+commands[doas])) {
-            cmd+=doas
+        for v (sudo doas) {
+            if (($+commands[$v])) {
+                cmd+=$v
+            }
         }
         if ((! $+cmd[1])) {
             exit 1
@@ -194,10 +192,10 @@ COPY --chmod=755 <<'PACMAN_INSTALL' ${OPT}/pacman-install
         -Sy
     )
     failures=()
-    for i ($*) {
-        cmd=($installation_cmd $i)
+    for pkg ($*) {
+        cmd=($installation_cmd $pkg)
         print-cmd $cmd
-        $cmd || failures+=$i
+        $cmd || failures+=$pkg
     }
 
     if (($+failures[1])) {
@@ -250,9 +248,11 @@ COPY --chmod=744 <<'FIX_USERADD' ${OPT}/fix-useradd-no-users
 FIX_USERADD
 # ---------------------
 # ---------------------
-FROM scratch
-COPY --from=ca-certs / /
-ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/local/games:/bin:/usr/games:/opt/sbin:/opt/bin
-SHELL [ "/opt/bin/zsh", "--pipefail", "-fexc"]
+# FROM scratch
+# COPY --from=ca-certs / /
+# ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/local/games:/bin:/usr/games:/opt/sbin:/opt/bin
+# SHELL [ "/opt/bin/zsh", "--pipefail", "-fexc"]
+
+FROM ca-certs
 COPY --from=pacman-static --chmod=755 /app/* /opt/bin/
 CMD ["/opt/bin/ash"]
