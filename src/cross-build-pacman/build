@@ -1,0 +1,44 @@
+#!/usr/bin/env zsh
+set -fexo pipefail
+typeset -x DOCKER_BUILDKIT=1
+local -r src_dir=${0:a:h}
+context=$src_dir
+
+local -A tmm_arch_map=(
+    # tmm_arch      oci_arch
+    rv64gc          riscv64
+    armv7a          arm/v7
+    ppc64le         ppc64le
+    ppc             powerpc
+    ppc64           powerpc64
+    loong64         loong64
+    i686            386
+)
+main_repo=ghcr.io/2cd/pacman-static:cache
+for tmm_arch oci_arch (${(kv)tmm_arch_map}) {
+    if [[ ${ARCHIMG_TMM_ARCH} != $tmm_arch ]] {
+        continue
+    }
+
+    case $tmm_arch {
+        (i*86) repo_arch=x86 ;;
+        (*) repo_arch=$tmm_arch ;;
+    }
+
+    repo=${main_repo}-$repo_arch
+    args=(
+        build
+        --progress=plain
+        --file $src_dir/Dockerfile
+        #
+        --tag $repo
+        --build-arg
+        ARCH=$tmm_arch
+        --platform=linux/$oci_arch
+    )
+
+    args+=$context
+    docker $args
+    # docker push $repo
+}
+

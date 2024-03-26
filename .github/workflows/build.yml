@@ -40,9 +40,7 @@ jobs:
 
       - name: install qemu-user using apt
         if: contains(fromJson('["ppc64le", "ppc", "ppc64", "loong64"]'), matrix.arch)
-        run: |
-          sudo apt update
-          sudo apt-get install -y qemu-user-static
+        run: sudo apt update && sudo apt-get install -y qemu-user-static
 
       - name: Login to GHCR
         uses: docker/login-action@v3
