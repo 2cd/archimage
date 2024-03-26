@@ -48,4 +48,4 @@ jobs:
       - name: build & push
         env:
           ARCHIMG_TMM_ARCH: ${{matrix.arch}}
-        run: ./src/build-pacman/build
+        run: ./src/cross-build-pacman/build
