@@ -39,6 +39,6 @@ for tmm_arch oci_arch (${(kv)tmm_arch_map}) {
 
     args+=$context
     docker $args
-    # docker push $repo
+    docker push $repo
 }
 
