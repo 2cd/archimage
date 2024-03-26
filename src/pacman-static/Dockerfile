@@ -187,9 +187,10 @@ set -feo pipefail
 
     installation_cmd=(
         $cmd
+        -Sy
         --overwrite '*'
         --noconfirm
-        -Sy
+        --needed
     )
     failures=()
     for pkg ($*) {

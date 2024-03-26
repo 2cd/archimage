@@ -9,8 +9,8 @@ jobs:
       fail-fast: false
       matrix:
         arch:
-          - rv64gc
-          - armv7a
+          # - rv64gc
+          # - armv7a
           - ppc64le
           - ppc
           - ppc64
