@@ -14,7 +14,7 @@ RUN <<EOF
     cat /etc/${MAKECFG}
 EOF
 
-USER user:user
+USER user:wheel
 RUN <<'EOF'
 #!/opt/bin/zsh
 set -feo pipefail
@@ -26,7 +26,7 @@ set -feo pipefail
     $cmd
     tar -xvf p.tgz
     cd aur-pacman-static/
-    pacman-install
+    sudo pacman -Sy
     makepkg -s --noconfirm --skippgpcheck
     sudo mkdir -p /app
     sudo cp pkg/pacman-static/usr/bin/pacman-*static /app
