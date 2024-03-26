@@ -26,7 +26,9 @@ set -feo pipefail
     $cmd
     tar -xvf p.tgz
     cd aur-pacman-static/
-    sudo pacman -Sy
+    # sudo pacman -Sy
+    pacman-install openssl clang ||:
+    sed -E "/aarch64/ s@^(arch=).*@\1('riscv64' 'powerpc' 'powerpc64' 'powerpc64le' 'i486' 'i686' 'pentium4' 'x86_64' 'arm' 'armv6h' 'armv7h' 'aarch64')" -i PKGBUILD
     makepkg -s --noconfirm --skippgpcheck
     sudo mkdir -p /app
     sudo cp pkg/pacman-static/usr/bin/pacman-*static /app

@@ -16,7 +16,7 @@ jobs:
           - ppc64
           # - loong64
           # - i486
-          - i686
+          # - i686
           # - x86
     runs-on: ubuntu-latest
     defaults:
