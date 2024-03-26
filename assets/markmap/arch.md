@@ -4,95 +4,95 @@ markmap:
   maxWidth: 300
 ---
 
-# arch &emsp;
+# arch
 
-## x64 &emsp;
+## x64
 
-- platform: linux/amd64 &emsp;
-- os-arch: x86_64 &emsp;
+- platform: linux/amd64
+- os-arch: x86_64
 
-## x64v2 &emsp;
+## x64v2
 
-- platform: linux/amd64/v2 &emsp;
-- os-arch: x86_64 &emsp;
-- description &emsp;
-  - feature level matches the 2008 Intel Nehalem &emsp;
-  - AMD Bulldozer and newer AMD "big" cores &emsp;
+- platform: linux/amd64/v2
+- os-arch: x86_64
+- description
+  - feature level matches the 2008 Intel Nehalem
+  - AMD Bulldozer and newer AMD "big" cores
   - <https://somegit.dev/ALHP/ALHP.GO>
 
-## x64v3 &emsp;
+## x64v3
 
-- platform: linux/amd64/v3 &emsp;
-- os-arch: x86_64 &emsp;
-- description &emsp;
-  - feature level matches the 2013 Intel Haswell &emsp;
-  - AMD Excavator and newer AMD "big" cores &emsp;
+- platform: linux/amd64/v3
+- os-arch: x86_64
+- description
+  - feature level matches the 2013 Intel Haswell
+  - AMD Excavator and newer AMD "big" cores
 
-## x64v4 &emsp;
+## x64v4
 
-- platform &emsp;
-  - linux/amd64/v3 &emsp;
-  - linux/amd64/v4 &emsp;
-- os-arch: x86_64 &emsp;
-- description &emsp;
-  - feature level matches the 2017 Intel Skylake-X &emsp;
-  - AMD Zen 4 cores &emsp;
+- platform
+  - linux/amd64/v3
+  - linux/amd64/v4
+- os-arch: x86_64
+- description
+  - feature level matches the 2017 Intel Skylake-X
+  - AMD Zen 4 cores
 
-## rv64gc &emsp;
+## rv64gc
 
-- platform: linux/riscv64 &emsp;
-- os-arch: riscv64 &emsp;
+- platform: linux/riscv64
+- os-arch: riscv64
 - description:
-  - RISC-V 64-Bit &emsp;
-  - IMAFDC &emsp;
+  - RISC-V 64-Bit
+  - IMAFDC
   - <https://riscv.mirror.pkgbuild.com/>
 
-## arm64 &emsp;
+## arm64
 
-- platform: linux/arm64 &emsp;
-- os-arch: aarch64 &emsp;
+- platform: linux/arm64
+- os-arch: aarch64
 - description: <https://archlinuxarm.org/platforms/armv8>
 
-## armv7a &emsp;
+## armv7a
 
-- platform: linux/arm/v7 &emsp;
-- os-arch: armv7h &emsp;
-- features: +vfp3, -d32, +thumb2 &emsp;
+- platform: linux/arm/v7
+- os-arch: armv7h
+- features: +vfp3, -d32, +thumb2
 
-## loong64 &emsp;
+## loong64
 
-- platform: linux/loong64 &emsp;
-- os-arch: loong64 &emsp;
+- platform: linux/loong64
+- os-arch: loong64
 - description: <https://loongarchlinux.org/>
 
-## x86 &emsp;
+## x86
 
-- platform: linux/386 &emsp;
-- os-arch: pentium4 &emsp;
+- platform: linux/386
+- os-arch: pentium4
 - description: <https://archlinux32.org/architecture/>
 
-## i686 &emsp;
+## i686
 
-- platform: linux/386 &emsp;
-- os-arch: i686 &emsp;
+- platform: linux/386
+- os-arch: i686
 
-## i486 &emsp;
+## i486
 
-- platform: linux/386 &emsp;
-- os-arch: i486 &emsp;
+- platform: linux/386
+- os-arch: i486
 
-## ppc64le &emsp;
+## ppc64le
 
-- platform: linux/ppc64le &emsp;
-- os-arch: powerpc64le &emsp;
+- platform: linux/ppc64le
+- os-arch: powerpc64le
 - description: <https://archlinuxpower.org/>
 
-## ppc64 &emsp;
+## ppc64
 
-- platform: linux/ppc64 &emsp;
-- os-arch: powerpc64 &emsp;
+- platform: linux/ppc64
+- os-arch: powerpc64
 
-## ppc &emsp;
+## ppc
 
-- platform: linux/ppc &emsp;
-- os-arch: powerpc &emsp;
+- platform: linux/ppc
+- os-arch: powerpc
