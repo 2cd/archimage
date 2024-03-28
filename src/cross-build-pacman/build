@@ -13,15 +13,33 @@ local -A tmm_arch_map=(
     ppc64           ppc64
     loong64         loong64
     i686            386
+    x64             amd64,x86_64
+    arm64           arm64,aarch64
 )
+get_region() {
+    language=$LANG[(ws^.^)1]
+    region=$language[(ws^_^)2]
+
+    # if region.is_empty()
+    if ((! #region)) {
+        region=US
+    }
+    print $region
+}
 main_repo=ghcr.io/2cd/pacman-static:cache
-for tmm_arch oci_arch (${(kv)tmm_arch_map}) {
+for tmm_arch archs (${(kv)tmm_arch_map}) {
     if [[ ${ARCHIMG_TMM_ARCH} != $tmm_arch ]] {
         continue
     }
+    arch_arr=(${(s^,^)archs})
+    oci_arch=$arch_arr[1]
+    os_arch=$arch_arr[2]
+    if ((! #os_arch)) {
+        os_arch=$oci_arch
+    }
 
     case $tmm_arch {
-        (i*86) repo_arch=x86 ;;
+        (i*86) repo_arch=x86    ;;
         (*) repo_arch=$tmm_arch ;;
     }
 
@@ -29,16 +47,27 @@ for tmm_arch oci_arch (${(kv)tmm_arch_map}) {
     args=(
         build
         --progress=plain
-        --file $src_dir/Dockerfile
         #
         --tag $repo
         --build-arg
         ARCH=$tmm_arch
+
+        --build-arg
+        OS_ARCH=$os_arch
+
+        --build-arg
+        REGION=$(get_region)
+
         --platform=linux/$oci_arch
+        --file
     )
+    case $tmm_arch {
+        (x64|arm64) args+=$src_dir/get.dockerfile   ;;
+        (*)         args+=$src_dir/build.dockerfile ;;
+    }
 
     args+=$context
     docker $args
-    docker push $repo
+    # docker push $repo
 }
 

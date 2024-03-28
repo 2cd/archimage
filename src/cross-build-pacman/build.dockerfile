@@ -3,15 +3,17 @@ ARG ARCH
 FROM ghcr.io/2cd/arch-dev:${ARCH} as dev
 USER 0:0
 
-ARG MAKECFG=makepkg.conf
-COPY <<'NODEBUG' /tmp/_${MAKECFG}
+ARG MK_CFG=makepkg.conf
+ARG TMP_CFG=/tmp/_${MK_CFG}
+COPY <<'NO_DEBUG' ${TMP_CFG}
 OPTIONS+=('!debug')
 MAKEFLAGS="-j$(nproc)"
-NODEBUG
+NO_DEBUG
 
+ARG CFG=/etc/${MK_CFG}
 RUN <<EOF
-    cat /tmp/_${MAKECFG} >> /etc/${MAKECFG}
-    cat /etc/${MAKECFG}
+    cat ${TMP_CFG} >> ${CFG}
+    cat ${CFG}
 EOF
 
 USER user:wheel
@@ -26,9 +28,11 @@ set -feo pipefail
     $cmd
     tar -xvf p.tgz
     cd aur-pacman-static/
-    # sudo pacman -Sy
-    pacman-install openssl clang ||:
-    sed -E "/aarch64/ s@^(arch=).*@\1('riscv64' 'loong64' 'powerpc' 'powerpc64' 'powerpc64le' 'i486' 'i686' 'pentium4' 'x86_64' 'arm' 'armv6h' 'armv7h' 'aarch64')@" -i PKGBUILD
+    sudo pacman -Sy
+    # pacman-install openssl clang ||:
+
+    archs=('riscv64' 'loong64' 'powerpc' 'powerpc64' 'powerpc64le' 'i486' 'i686' 'pentium4' 'x86_64' 'arm' 'armv6h' 'armv7h' 'aarch64')
+    sed -E "/aarch64/ s@^(arch=).*@\1($archs)@" -i PKGBUILD
     makepkg -s --noconfirm --skippgpcheck
     sudo mkdir -p /app
     sudo cp pkg/pacman-static/usr/bin/pacman-*static /app

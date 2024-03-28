@@ -75,9 +75,9 @@ for tmm_arch arch (${(kv)tmm_arch_map}) {
         --build-arg
     )
     case $tmm_arch {
-        x64*) tmm_arch_v0=x64      ;;
-        i*86) tmm_arch_v0=x86      ;;
-        *)    tmm_arch_v0=$tmm_arch;;
+        (x64*) tmm_arch_v0=x64      ;;
+        (i*86) tmm_arch_v0=x86      ;;
+        (*)    tmm_arch_v0=$tmm_arch;;
     }
     args+=TMM_ARCH_V0=$tmm_arch_v0
 
